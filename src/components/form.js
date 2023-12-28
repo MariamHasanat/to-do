@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Input from './input'
 import Button from './button'
-
+// import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-
+    // const navigate = useNavigate();
     const [required] = useState(true)
     const [formData, setFormData] = useState({
         username: "",
