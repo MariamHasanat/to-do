@@ -4,9 +4,9 @@ import React, { useState } from 'react'
 const Form = () => {
     // eslint-disable-next-line
     const [formData, setFormData] = useState({
-        username: "",
-        password: "",
-        email: ""
+        username:"",
+        password:'',
+        email: ''
     })
 
     const handleSubmit = () => {
@@ -21,47 +21,77 @@ const Form = () => {
 
     return (
         <div>
-            <form>  
+            <form>
                 {/* onSubmit={handleSubmit} */}
-                <label>
-                    UserName
-                    <input type='text'
-                        name='username'
-                        value={formData.username}
-                        onChange={e => {
-                            e.preventDefault()
-                            setFormData({ ...formData, username: e.target.value })
-                        }}
-                    />
-                </label>
-                <label>
-                    Password
-                    <input type='password'
-                        name='password'
-                        value={formData.password}
-                        onChange={e => {
-                            e.preventDefault()
-                            setFormData({ ...formData, password: e.target.value })
-                        }}
-                    />
-                </label>
-                <label>
-                    Email
-                    <input type='email'
-                        name='email'
-                        value={formData.email}
-                        onChange={e => {
-                            e.preventDefault()
-                            setFormData({ ...formData, email: e.target.value })
-                        }}
-                    />
-                </label>
-                <button
-                    onClick={e => {
-                        e.preventDefault()
-                        handleSubmit()
-                    }}
-                >Submit Data</button>
+                <div className='form-row'>
+                    <div className=' input-data'>
+                        <input
+                            required={true}
+                            type='text'
+                            name='username'
+                            value={formData.username}
+                            onChange={e => {
+                                e.preventDefault()
+                                setFormData({ ...formData, username: e.target.value })
+                            }}
+                        />
+                        <div className="underline"></div>
+                        <label>
+                            UserName
+                        </label>
+                    </div>
+                </div>
+                <div className='form-row'>
+                    <div className=' input-data'>
+                        <input
+                            required={true}
+                            type='password'
+                            name='password'
+                            value={formData.password}
+                            onChange={e => {
+                                e.preventDefault()
+                                setFormData({ ...formData, password: e.target.value })
+                            }}
+                        />
+                        <div className="underline"></div>
+                        <label>
+                            Password
+                        </label>
+                    </div>
+                </div>
+                <div className='form-row'>
+                    <div className=' input-data'>
+                        <input
+                            required={true}
+                            type='email'
+                            name='email'
+                            value={formData.email}
+                            onChange={e => {
+                                e.preventDefault()
+                                setFormData({ ...formData, email: e.target.value })
+                            }}
+                        />
+                        <div className="underline"></div>
+                        <label>
+                            Email
+                        </label>
+                    </div>
+                </div>
+                <br />
+                <div className="form-row submit-btn">
+                    <div className="input-data">
+                        <div className="inner"></div>
+                        <input
+                            type='submit'
+                            value='Submit'
+                            onClick={e => {
+                                e.preventDefault()
+                                handleSubmit()
+                            }}
+                        />
+                    </div>
+                </div>
+                {/*  */}
             </form>
         </div>
     )
