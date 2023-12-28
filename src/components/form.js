@@ -12,6 +12,24 @@ const Form = () => {
         email: ''
     })
 
+    const handleSubmit = () => {
+        if (required && formData.username.length === 0) {
+            alert("\nPlease Enter a Valid User Name")
+        }
+        else if (formData.password.length === 0) {
+            alert("\nPlease Enter a Valid Password ")
+        } else if (formData.email.length === 0) {
+            alert("\nPlease Enter a Valid Email")
+        } else {
+            console.log("form Data", formData);
+            setFormData({
+                username: "",
+                password: "",
+                email: ""
+            })
+        }
+    }
+
     return (
         <div>
             <form>
@@ -48,6 +66,7 @@ const Form = () => {
                     required={required}
                     setFormData={setFormData}
                     label='Submit'
+                    handleSubmit={handleSubmit}
                 />
             </form>
         </div>
