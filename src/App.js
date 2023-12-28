@@ -8,10 +8,10 @@ function App() {
   // const [array, setArray] = useState([])
   return (
     <div className="container">
-      <div className='text'>Mariam Hasanat Form</div>
-      <Form/>
 
-     {/* <ToDoInput array = {array} setArray = {setArray} />
+      <Form />
+
+      {/* <ToDoInput array = {array} setArray = {setArray} />
      <ToDoList array = {array} /> */}
     </div>
   );
