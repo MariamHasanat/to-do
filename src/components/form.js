@@ -2,27 +2,34 @@ import React, { useState } from 'react'
 
 
 const Form = () => {
-    // eslint-disable-next-line
+  
     const [formData, setFormData] = useState({
-        username:"",
-        password:'',
+        username: "",
+        password: '',
         email: ''
     })
 
     const handleSubmit = () => {
-        console.log("form Data", formData);
-
-        setFormData({
-            username: "",
-            password: "",
-            email: ""
-        })
+        if (formData.username.length === 0) {
+            alert("\nPlease Enter a Valid User Name")
+        }
+        else if (formData.password.length === 0) {
+            alert("\nPlease Enter a Valid Password ")
+        } else if (formData.email.length === 0) {
+            alert("\nPlease Enter a Valid Email")
+        } else {
+            console.log("form Data", formData);
+            setFormData({
+                username: "",
+                password: "",
+                email: ""
+            })
+        }
     }
 
     return (
         <div>
             <form>
-                {/* onSubmit={handleSubmit} */}
                 <div className='form-row'>
                     <div className=' input-data'>
                         <input
@@ -81,17 +88,16 @@ const Form = () => {
                 <div className="form-row submit-btn">
                     <div className="input-data">
                         <div className="inner"></div>
-                        <input
+                        <button
                             type='submit'
                             value='Submit'
                             onClick={e => {
                                 e.preventDefault()
                                 handleSubmit()
                             }}
-                        />
+                        >Submit</button>
                     </div>
                 </div>
-                {/*  */}
             </form>
         </div>
     )
