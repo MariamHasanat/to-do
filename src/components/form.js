@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import Input from './input'
 
 
 const Form = () => {
-  
+
+    const [required] = useState(true)
     const [formData, setFormData] = useState({
         username: "",
         password: '',
@@ -10,7 +12,7 @@ const Form = () => {
     })
 
     const handleSubmit = () => {
-        if (formData.username.length === 0) {
+        if (required && formData.username.length === 0) {
             alert("\nPlease Enter a Valid User Name")
         }
         else if (formData.password.length === 0) {
@@ -30,60 +32,33 @@ const Form = () => {
     return (
         <div>
             <form>
-                <div className='form-row'>
-                    <div className=' input-data'>
-                        <input
-                            required={true}
-                            type='text'
-                            name='username'
-                            value={formData.username}
-                            onChange={e => {
-                                e.preventDefault()
-                                setFormData({ ...formData, username: e.target.value })
-                            }}
-                        />
-                        <div className="underline"></div>
-                        <label>
-                            UserName
-                        </label>
-                    </div>
-                </div>
-                <div className='form-row'>
-                    <div className=' input-data'>
-                        <input
-                            required={true}
-                            type='password'
-                            name='password'
-                            value={formData.password}
-                            onChange={e => {
-                                e.preventDefault()
-                                setFormData({ ...formData, password: e.target.value })
-                            }}
-                        />
-                        <div className="underline"></div>
-                        <label>
-                            Password
-                        </label>
-                    </div>
-                </div>
-                <div className='form-row'>
-                    <div className=' input-data'>
-                        <input
-                            required={true}
-                            type='email'
-                            name='email'
-                            value={formData.email}
-                            onChange={e => {
-                                e.preventDefault()
-                                setFormData({ ...formData, email: e.target.value })
-                            }}
-                        />
-                        <div className="underline"></div>
-                        <label>
-                            Email
-                        </label>
-                    </div>
-                </div>
+                <Input
+                    label='UserName'
+                    value={formData.username}
+                    setFormData={setFormData}
+                    name='username'
+                    type='text'
+                    formData={formData}
+                    required={required}
+                />
+                <Input
+                    label='Password'
+                    value={formData.password}
+                    setFormData={setFormData}
+                    name='password'
+                    type='password'
+                    formData={formData}
+                    required={required}
+                />
+                <Input
+                    label='Email'
+                    value={formData.email}
+                    setFormData={setFormData}
+                    name='email'
+                    type='email'
+                    formData={formData}
+                    required={required}
+                />
                 <br />
                 <div className="form-row submit-btn">
                     <div className="input-data">
