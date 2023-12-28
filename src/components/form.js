@@ -22,6 +22,7 @@ const Form = () => {
             alert("\nPlease Enter a Valid Email")
         } else {
             console.log("form Data", formData);
+            alert("Submitted Successfully 🔥")
             setFormData({
                 username: "",
                 password: "",
