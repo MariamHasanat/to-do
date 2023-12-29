@@ -4,7 +4,7 @@ import ToDoElement from '../to-do-element'
 // import ToDoElement from './to-do-element'
 
 // array typeof [];
-const ToDoList = (props) => {
+const ToDoList = () => {
 
   const [array, setArray] = useState([])
 
@@ -18,7 +18,7 @@ const ToDoList = (props) => {
       {
         array.map((value, index) => (
           <div key={index}>
-            <ToDoElement to_do_value={value} index={index} />
+            <ToDoElement to_do_value={value} index={index} array={array} setArray={setArray} />
           </div>
         )
         )
