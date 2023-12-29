@@ -8,7 +8,8 @@ const Button = (props) => {
         <div className="form-row submit-btn">
             <div className="input-data">
                 <div className="inner"></div>
-                <button
+                <button 
+                className='button-mariam'
                     type='submit'
                     value='Submit'
                     onClick={e => {

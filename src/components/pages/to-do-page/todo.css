@@ -6,13 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+.body{
     font-family: 'Poppins', sans-serif;
 }
-.container{
+.container1{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
+    background: transparent;
     padding: 10px;
     display: flex;
     justify-content: center;

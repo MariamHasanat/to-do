@@ -1,11 +1,12 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import Button from '../button';
+import './form-page/form.css'
 
 const Home = () => {
     const navigate = useNavigate();
     return (
-        <div>
+        <div className="container">
             <div className='text'>
                 Hello
             </div>

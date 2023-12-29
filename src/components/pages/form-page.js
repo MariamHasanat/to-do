@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Input from '../input'
 import Button from '../button'
+import './form-page/form.css'
 // import { useNavigate } from "react-router-dom";
 
 const Form = () => {
@@ -32,7 +33,7 @@ const Form = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <div className='text'>Mariam Hasanat Form</div>
             <form>
                 <Input
