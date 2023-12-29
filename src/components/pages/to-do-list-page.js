@@ -16,9 +16,9 @@ const ToDoList = (props) => {
     <div>
       <ToDoInput array={array} setArray={setArray} />
       {
-        Array(array).map((value, index) => (
+        array.map((value, index) => (
           <div key={index}>
-            <ToDoElement to_do_value={value} />
+            <ToDoElement to_do_value={value} index={index} />
           </div>
         )
         )

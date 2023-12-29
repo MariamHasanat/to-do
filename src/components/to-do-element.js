@@ -1,12 +1,9 @@
 import React from 'react'
 
 const ToDoElement = (props) => {
-    const {to_do_value} = props
+  const { to_do_value, index } = props
   return (
-    <div>
-        {/* <input type='checkbox'/> */}
-        <span>{to_do_value}</span>
-    </div>
+    <div key={index}>{to_do_value}</div>
   )
 }
 
