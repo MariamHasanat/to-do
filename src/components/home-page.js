@@ -10,9 +10,12 @@ const Home = () => {
                 Hello
             </div>
             <br />
-            <form>
-                <Button label='form page' handleSubmit={onclick => navigate('/form')} />
-            </form>
+            <div className='home-button'>
+                <Button label='form page' handleSubmit={() => navigate('/form')} />
+            </div>
+            <div className='home-button'>
+                <Button label='to-do list page' handleSubmit={() => navigate('/to-do')} />
+            </div>
         </div>
     )
 }
