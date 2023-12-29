@@ -1,10 +1,10 @@
 // import { useState } from 'react';
 import './App.css';
-import Form from './components/form-page';
+import Form from './components/pages/form-page';
 // import ToDoInput from './components/to-do';
-import ToDoList from './components/to-do-list-page';
+import ToDoList from './components/pages/to-do-list-page';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/home-page';
+import Home from './components/pages/home-page';
 function App() {
   // const [array, setArray] = useState([])
 
