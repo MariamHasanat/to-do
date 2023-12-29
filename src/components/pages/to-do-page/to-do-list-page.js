@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import ToDoInput from '../to-do-input'
-import ToDoElement from '../to-do-element'
-import './to-do-page/todo.css'
+import './todo.css'
+import ToDoInput from './to-do-input'
+import ToDoElement from './to-do-element'
 
 const ToDoList = () => {
 

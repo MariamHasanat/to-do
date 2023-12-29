@@ -1,5 +1,5 @@
 import React from 'react'
-import './pages/to-do-page/todo.css'
+import './todo.css'
 
 const ToDoElement = (props) => {
   const { to_do_value, index, array, setArray } = props

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Input from '../input'
-import Button from '../button'
-import './form-page/form.css'
+import Input from '../../input'
+import Button from '../../button'
+import './form.css'
 // import { useNavigate } from "react-router-dom";
 
 const Form = () => {

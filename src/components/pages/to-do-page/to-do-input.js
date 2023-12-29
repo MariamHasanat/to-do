@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './pages/to-do-page/todo.css'
+import './todo.css'
 
 const ToDoInput = (props) => {
     const { array, setArray } = props
