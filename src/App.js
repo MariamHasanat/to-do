@@ -1,7 +1,5 @@
-// import { useState } from 'react';
 import './App.css';
 import Form from './components/pages/form-page';
-// import ToDoInput from './components/to-do';
 import ToDoList from './components/pages/to-do-list-page';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/home-page';
@@ -17,9 +15,6 @@ function App() {
           <Route path="/*" element={
             <Home />
           } />
-
-          {/* <ToDoInput array = {array} setArray = {setArray} />
-              <ToDoList array = {array} /> */}
         </Routes>
       </Router>
 

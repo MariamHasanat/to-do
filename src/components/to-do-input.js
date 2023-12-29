@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 const ToDoInput = (props) => {
-    // eslint-disable-next-line
     const { array, setArray } = props
     const [to_do_value, setToDoValue] = useState('');
 
@@ -18,8 +17,7 @@ const ToDoInput = (props) => {
             </input>
             <button onClick={e => {
                 e.preventDefault()
-                // array.push(to_do_value || "")
-                setArray([...array, to_do_value])
+                setArray([to_do_value, ...array])
                 setToDoValue('')
             }}>Add Element</button>
         </div>
