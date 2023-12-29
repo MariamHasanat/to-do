@@ -1,21 +1,29 @@
 import React from 'react'
-import Button from './button'
+import './pages/to-do-page/todo.css'
 
 const ToDoElement = (props) => {
   const { to_do_value, index, array, setArray } = props
   return (
-    <div key={index}>
-      <span>
-        {to_do_value}
+    <li
+      onClick={(e) => {
+        if (e.target.tagName === "LI") {
+          e.target.classList.toggle("checked");
+        } else if (e.target.tagName === "SPAN") {
+          e.target.parentElement.remove();
+        }
+      }}
+      key={index} id="list-container">
+      {to_do_value}
+      <span
+        onClick={() => {
+          array.splice(index, 1)
+          setArray([...array])
+          console.log(array);
+        }}
+      >
+        x
       </span>
-      <div className='home-button'>
-      <Button label="delete" handleSubmit={() => {
-        array.splice(index,1)
-        setArray([...array])
-        console.log(array);
-      }} />
-      </div>
-    </div>
+    </li>
   )
 }
 
