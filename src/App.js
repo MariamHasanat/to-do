@@ -6,8 +6,7 @@ import ToDoList from './components/pages/to-do-list-page';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/home-page';
 function App() {
-  // const [array, setArray] = useState([])
-
+  
   return (
     <div className="container">
 
